@@ -141,8 +141,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 if(xNormal)
                 {
                     //aufwärts
-                    if(tz > 7.0f)
-                    {
+                    if(tz > 11.0f)
+                    {   
                         Location location = getLastKnownLocation();
                         if (location == null) {
                             textInfo.setText("Es konnte keine Postion gefunden werden. Bitte sichergehen, dass GPS aktiviert ist und am Besten einmal in der Google Maps App orten lassen.");
@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                         }
                     }
                     //abwärts
-                    else if (tz < -5.0f)
+                    else if (tz < -9.0f)
                     {
                         String erg = d.getData();
                         textInfo.setText(erg);
