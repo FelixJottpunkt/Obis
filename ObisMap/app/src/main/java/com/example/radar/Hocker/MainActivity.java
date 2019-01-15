@@ -142,6 +142,31 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 {
                     //aufwärts
                     if(tz > 11.0f)
+<<<<<<< HEAD
+                    {
+                        String message = "" + textEdit.getText().toString();
+                        if(!message.equals("")) {
+                            Location location = getLastKnownLocation();
+                            if (location == null) {
+                                textInfo.setText("Es konnte keine Postion gefunden werden. Bitte sichergehen, dass GPS aktiviert ist und am Besten einmal in der Google Maps App orten lassen.");
+                                return;
+                            }
+                            longitude = location.getLongitude();
+                            latitude = location.getLatitude();
+                            // textInfo.setText(latitude + " , " + longitude);
+                            String eingabe = textEdit.getText().toString();
+                            int ret = d.insertPositionWithText(longitude, latitude, eingabe);
+                            switch (ret) {
+                                case 0:
+                                    textInfo.setText("Eintrag " + eingabe + " erfolgreich hochgeladen.");
+                                    break;
+                                case 1:
+                                    textInfo.setText("Fehler beim Aufbau der Verbindung. Bitte prüfen ob eine stabile Verbindung zum Internet besteht.");
+                                    break;
+                                case 2:
+                                    textInfo.setText("Fehler beim Hochladen der Daten. Bitte erneut versuchen. ");
+                            }
+=======
                     {   
                         Location location = getLastKnownLocation();
                         if (location == null) {
@@ -162,6 +187,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                                 break;
                             case 2:
                                 textInfo.setText("Fehler beim Hochladen der Daten. Bitte erneut versuchen. ");
+>>>>>>> 7c87b8f3f1cf561d6c9ca1c68e10ed6bbc2a627b
                         }
                     }
                     //abwärts
@@ -177,25 +203,28 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                     //aufwärts
                     if(ty > 11.0f)
                     {
-                        Location location = getLastKnownLocation();
-                        if (location == null) {
-                            textInfo.setText("Es konnte keine Postion gefunden werden. Bitte sichergehen, dass GPS aktiviert ist und am Besten einmal in der Google Maps App orten lassen.");
-                            return;
-                        }
-                        longitude = location.getLongitude();
-                        latitude = location.getLatitude();
-                        // textInfo.setText(latitude + " , " + longitude);
-                        String eingabe = textEdit.getText().toString();
-                        int ret = d.insertPositionWithText(longitude, latitude, eingabe);
-                        switch (ret) {
-                            case 0:
-                                textInfo.setText("Eintrag " + eingabe + " erfolgreich hochgeladen.");
-                                break;
-                            case 1:
-                                textInfo.setText("Fehler beim Aufbau der Verbindung. Bitte prüfen ob eine stabile Verbindung zum Internet besteht.");
-                                break;
-                            case 2:
-                                textInfo.setText("Fehler beim Hochladen der Daten. Bitte erneut versuchen. ");
+                        String message = "" + textEdit.getText().toString();
+                        if(!message.equals("")) {
+                            Location location = getLastKnownLocation();
+                            if (location == null) {
+                                textInfo.setText("Es konnte keine Postion gefunden werden. Bitte sichergehen, dass GPS aktiviert ist und am Besten einmal in der Google Maps App orten lassen.");
+                                return;
+                            }
+                            longitude = location.getLongitude();
+                            latitude = location.getLatitude();
+                            // textInfo.setText(latitude + " , " + longitude);
+                            String eingabe = textEdit.getText().toString();
+                            int ret = d.insertPositionWithText(longitude, latitude, eingabe);
+                            switch (ret) {
+                                case 0:
+                                    textInfo.setText("Eintrag " + eingabe + " erfolgreich hochgeladen.");
+                                    break;
+                                case 1:
+                                    textInfo.setText("Fehler beim Aufbau der Verbindung. Bitte prüfen ob eine stabile Verbindung zum Internet besteht.");
+                                    break;
+                                case 2:
+                                    textInfo.setText("Fehler beim Hochladen der Daten. Bitte erneut versuchen. ");
+                            }
                         }
                     }
                     //abwärts
@@ -210,25 +239,28 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                     //aufwärts
                     if(tx > 11.0f)
                     {
-                        Location location = getLastKnownLocation();
-                        if (location == null) {
-                            textInfo.setText("Es konnte keine Postion gefunden werden. Bitte sichergehen, dass GPS aktiviert ist und am Besten einmal in der Google Maps App orten lassen.");
-                            return;
-                        }
-                        longitude = location.getLongitude();
-                        latitude = location.getLatitude();
-                        // textInfo.setText(latitude + " , " + longitude);
-                        String eingabe = textEdit.getText().toString();
-                        int ret = d.insertPositionWithText(longitude, latitude, eingabe);
-                        switch (ret) {
-                            case 0:
-                                textInfo.setText("Eintrag " + eingabe + " erfolgreich hochgeladen.");
-                                break;
-                            case 1:
-                                textInfo.setText("Fehler beim Aufbau der Verbindung. Bitte prüfen ob eine stabile Verbindung zum Internet besteht.");
-                                break;
-                            case 2:
-                                textInfo.setText("Fehler beim Hochladen der Daten. Bitte erneut versuchen. ");
+                        String message = "" + textEdit.getText().toString();
+                        if(!message.equals("")) {
+                            Location location = getLastKnownLocation();
+                            if (location == null) {
+                                textInfo.setText("Es konnte keine Postion gefunden werden. Bitte sichergehen, dass GPS aktiviert ist und am Besten einmal in der Google Maps App orten lassen.");
+                                return;
+                            }
+                            longitude = location.getLongitude();
+                            latitude = location.getLatitude();
+                            // textInfo.setText(latitude + " , " + longitude);
+                            String eingabe = textEdit.getText().toString();
+                            int ret = d.insertPositionWithText(longitude, latitude, eingabe);
+                            switch (ret) {
+                                case 0:
+                                    textInfo.setText("Eintrag " + eingabe + " erfolgreich hochgeladen.");
+                                    break;
+                                case 1:
+                                    textInfo.setText("Fehler beim Aufbau der Verbindung. Bitte prüfen ob eine stabile Verbindung zum Internet besteht.");
+                                    break;
+                                case 2:
+                                    textInfo.setText("Fehler beim Hochladen der Daten. Bitte erneut versuchen. ");
+                            }
                         }
                     }
                     //abwärts
@@ -243,25 +275,28 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                     //abwärts
                     if(tx > -9.0f)
                     {
-                        Location location = getLastKnownLocation();
-                        if (location == null) {
-                            textInfo.setText("Es konnte keine Postion gefunden werden. Bitte sichergehen, dass GPS aktiviert ist und am Besten einmal in der Google Maps App orten lassen.");
-                            return;
-                        }
-                        longitude = location.getLongitude();
-                        latitude = location.getLatitude();
-                        // textInfo.setText(latitude + " , " + longitude);
-                        String eingabe = textEdit.getText().toString();
-                        int ret = d.insertPositionWithText(longitude, latitude, eingabe);
-                        switch (ret) {
-                            case 0:
-                                textInfo.setText("Eintrag " + eingabe + " erfolgreich hochgeladen.");
-                                break;
-                            case 1:
-                                textInfo.setText("Fehler beim Aufbau der Verbindung. Bitte prüfen ob eine stabile Verbindung zum Internet besteht.");
-                                break;
-                            case 2:
-                                textInfo.setText("Fehler beim Hochladen der Daten. Bitte erneut versuchen. ");
+                        String message = "" + textEdit.getText().toString();
+                        if(!message.equals("")) {
+                            Location location = getLastKnownLocation();
+                            if (location == null) {
+                                textInfo.setText("Es konnte keine Postion gefunden werden. Bitte sichergehen, dass GPS aktiviert ist und am Besten einmal in der Google Maps App orten lassen.");
+                                return;
+                            }
+                            longitude = location.getLongitude();
+                            latitude = location.getLatitude();
+                            // textInfo.setText(latitude + " , " + longitude);
+                            String eingabe = textEdit.getText().toString();
+                            int ret = d.insertPositionWithText(longitude, latitude, eingabe);
+                            switch (ret) {
+                                case 0:
+                                    textInfo.setText("Eintrag " + eingabe + " erfolgreich hochgeladen.");
+                                    break;
+                                case 1:
+                                    textInfo.setText("Fehler beim Aufbau der Verbindung. Bitte prüfen ob eine stabile Verbindung zum Internet besteht.");
+                                    break;
+                                case 2:
+                                    textInfo.setText("Fehler beim Hochladen der Daten. Bitte erneut versuchen. ");
+                            }
                         }
                     }
                     //aufwärts
